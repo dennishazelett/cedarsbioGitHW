@@ -1,0 +1,121 @@
+Test file for Homework 3
+
+Example of checking for software availability
+
+ubuntu@ip-172-31-19-52:~/homework-03/nirmhw3$ apt-cache policy bb
+bb:
+  Installed: (none)
+  Candidate: 1.3rc1-8.4
+  Version table:
+     1.3rc1-8.4 500
+        500 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 Packages
+
+Example of how to figure out how to dowmload and install software after 3 hours of googling 
+
+ubuntu@ip-172-31-19-52:~$ bb
+The program 'bb' is currently not installed. You can install it by typing:
+sudo apt install bb
+
+ubuntu@ip-172-31-19-52:~$ sudo apt install bb
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libaa1 libcaca0 libmikmod3 libopenal-data libopenal1 libsdl1.2debian
+Suggested packages:
+  libportaudio2
+The following NEW packages will be installed:
+  bb libaa1 libcaca0 libmikmod3 libopenal-data libopenal1 libsdl1.2debian
+0 upgraded, 7 newly installed, 0 to remove and 4 not upgraded.
+Need to get 1,784 kB of archives.
+After this operation, 4,593 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libopenal-data all 1:1.16.0-3 [101 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libopenal1 amd64 1:1.16.0-3 [164 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libaa1 amd64 1.4p5-44build1 [47.3 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcaca0 amd64 0.99.beta19-2build2~gcc5.2 [202 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libsdl1.2debian amd64 1.2.15+dfsg1-3 [168 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libmikmod3 amd64 3.3.8-2 [114 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 bb amd64 1.3rc1-8.4 [988 kB]
+Fetched 1,784 kB in 0s (11.0 MB/s)
+Selecting previously unselected package libopenal-data.
+(Reading database ... 281415 files and directories currently installed.)
+Preparing to unpack .../libopenal-data_1%3a1.16.0-3_all.deb ...
+Unpacking libopenal-data (1:1.16.0-3) ...
+Selecting previously unselected package libopenal1:amd64.
+Preparing to unpack .../libopenal1_1%3a1.16.0-3_amd64.deb ...
+Unpacking libopenal1:amd64 (1:1.16.0-3) ...
+Selecting previously unselected package libaa1:amd64.
+Preparing to unpack .../libaa1_1.4p5-44build1_amd64.deb ...
+Unpacking libaa1:amd64 (1.4p5-44build1) ...
+Selecting previously unselected package libcaca0:amd64.
+Preparing to unpack .../libcaca0_0.99.beta19-2build2~gcc5.2_amd64.deb ...
+Unpacking libcaca0:amd64 (0.99.beta19-2build2~gcc5.2) ...
+Selecting previously unselected package libsdl1.2debian:amd64.
+Preparing to unpack .../libsdl1.2debian_1.2.15+dfsg1-3_amd64.deb ...
+Unpacking libsdl1.2debian:amd64 (1.2.15+dfsg1-3) ...
+Selecting previously unselected package libmikmod3:amd64.
+Preparing to unpack .../libmikmod3_3.3.8-2_amd64.deb ...
+Unpacking libmikmod3:amd64 (3.3.8-2) ...
+Selecting previously unselected package bb.
+Preparing to unpack .../bb_1.3rc1-8.4_amd64.deb ...
+Unpacking bb (1.3rc1-8.4) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libopenal-data (1:1.16.0-3) ...
+Setting up libopenal1:amd64 (1:1.16.0-3) ...
+Setting up libaa1:amd64 (1.4p5-44build1) ...
+Setting up libcaca0:amd64 (0.99.beta19-2build2~gcc5.2) ...
+Setting up libsdl1.2debian:amd64 (1.2.15+dfsg1-3) ...
+Setting up libmikmod3:amd64 (3.3.8-2) ...
+Setting up bb (1.3rc1-8.4) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+
+Example of the weirdness after running bb
+
+ubuntu@ip-172-31-19-52:~/homework-03/nirmhw3$ bb
+
+7B 16 B6 E8 F6 BA B0 2A F5 22 39 9B 94 E0 41 C7 44 7D BF 9A 9B CB A7 7F 11 3F FD A7 DB 9A 13 5B FB FE F6 3F 34 EA BA B7 86 BB
+E8 63 FF ED 13 04 DD F2 F2 5C 55 02 9F BD EB E4 CD A0 6E E9 2E D9 8D 3A 35 A5 5C 0C AE D0 15 D2 58 7C 13 AB DD 3C A2 5A C7 A9
+AC FA 81 B0 A7 6E 7D 42 CD 47 A4 CF EE AE 42 37 D6 CB 3B A5 61 BE 2E 4C D2 68 85 E5 FB 83 D8 01 3C C4 87 4D D5 F3 79 E2 CD 1E
+17 4D 03 F6 FD 12 E7 3E 9B 5C ED DE FA AA C3 9F CF 8C DD 77 BA D1 65 BB C2 74 40 E3 D1 64 1D 45 CF A0 9D 27 D6 4B D4 EC 95 2
+
+That is only the beggining, then I swear I was high, but it was actually the program
+
+Example of looking af other commans for apt-get:
+
+ubuntu@ip-172-31-19-52:~/homework-03/nirmhw3$ man apt-get
+
+ remove
+           remove is identical to install except that packages are removed instead of installed. Note that removing a
+           package leaves its configuration files on the system. If a plus sign is appended to the package name (with no
+           intervening space), the identified package will be installed instead of removed.
+
+       purge
+           purge is identical to remove except that packages are removed and purged (any configuration files are deleted
+           too).
+
+ubuntu@ip-172-31-19-52:~/homework-03/nirmhw3$ apt-get purge bb
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+
+Example of how to remove after googling:
+
+ubuntu@ip-172-31-19-52:~$ sudo apt-get purge bb
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libaa1 libcaca0 libmikmod3 libopenal-data libopenal1 libsdl1.2debian
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  bb*
+0 upgraded, 0 newly installed, 1 to remove and 4 not upgraded.
+After this operation, 1,893 kB disk space will be freed.
+Do you want to continue? [Y/n] yes
+(Reading database ... 281484 files and directories currently installed.)
+Removing bb (1.3rc1-8.4) ...
+Purging configuration files for bb (1.3rc1-8.4) ...
+Processing triggers for man-db (2.7.5-1) ...
+
